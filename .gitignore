@@ -7,5 +7,4 @@ dist
 .env.*
 !.env.example
 *.log
-pnpm-lock.yaml
 vive-website-images-data/
