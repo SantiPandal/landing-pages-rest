@@ -19,7 +19,7 @@ export const config: SiteConfig = {
   },
 
   socialProof: {
-    title: 'Plataforma de Vive Energia SAPI de CV',
+    title: 'Plataforma de Vive Energia',
     logos: [
       { src: '/images/clients/mars.png', alt: 'Mars' },
       { src: '/images/clients/john-deere.png', alt: 'John Deere' },
@@ -39,45 +39,55 @@ export const config: SiteConfig = {
   },
 
   howItWorks: {
-    title: 'Tu problema',
-    subtitle: 'Tienes multiples sucursales o plantas. No sabes cual consume de mas, donde hay anomalias, ni si tu tarifa es la correcta. Tu recibo de luz es una caja negra.',
+    title: '¿Cómo se instala Trackio?',
+    subtitle: 'Sigue estos pasos para tener monitoreo energético en tu empresa de manera rápida y sencilla.',
     steps: [
       {
         number: 1,
-        title: 'Instalacion de Sensores',
-        description: 'Colocamos sensores inteligentes en tus tableros electricos. Sin obras, sin interrupciones a tu operacion.',
+        title: 'Diagnóstico y Planeación',
+        description: 'Analizamos tu instalación y determinamos la mejor forma de monitorear tus tableros, equipos o sucursales.',
       },
       {
         number: 2,
-        title: 'Datos en Tiempo Real',
-        description: 'Visualiza consumos por area, equipo o sucursal desde cualquier dispositivo. Alertas automaticas ante anomalias.',
+        title: 'Instalación de Sensores',
+        description: 'Instalamos sensores inteligentes en tus tableros eléctricos. Sin afectar tu operación; rápido y sin obras complicadas.',
       },
       {
         number: 3,
-        title: 'Optimizacion Continua',
-        description: 'Identifica desperdicios, valida facturas de CFE y toma decisiones basadas en datos reales.',
+        title: 'Activación y Entrenamiento',
+        description: 'Conectamos tus sensores a la plataforma, configuramos alertas y te entrenamos para sacar el máximo provecho de Trackio.',
       },
     ],
   },
 
   solutions: {
-    headline: 'Modulos Trackio',
-    subtitle: 'Tu recibo de luz no deberia ser una sorpresa. Trackio hace visible cada kilowatt.',
+    headline: 'Monitorea todo tu negocio',
+    subtitle: 'Trackio pone en tus manos datos en tiempo real de cada parte clave de tu operación energética.',
     items: [
       {
-        title: 'Vista del Mercado Electrico',
-        description: 'Precios del mercado mayorista, tarifas CFE, demanda por region — todo en un mapa interactivo. Comprende el mercado electrico en tiempo real.',
-        image: '/images/solutions/monitoreo.png',
+        title: 'Consumo por Área o Sucursal',
+        description: 'Visualiza cuánta energía utiliza cada uno de tus sitios, áreas o sucursales. Detecta desperdicio, compara desempeño y enfoca tus acciones donde más impacto tienen.',
+        image: '/images/solutions/areas.png',
       },
       {
-        title: 'Tu Dashboard Personalizado',
-        description: 'Tu tarifa estimada, indicadores de consumo, contratos digitalizados de tu suministro. Todo personalizado para tu operacion.',
+        title: 'Equipos Críticos',
+        description: 'Sigue el consumo de tus equipos más importantes: chillers, aire acondicionado, líneas de producción, compresores. Recibe alertas inmediatas si se detectan anomalías.',
+        image: '/images/solutions/equipos.png',
+      },
+      {
+        title: 'Facturación y Validación de CFE',
+        description: 'Automatiza la validación de tus facturas: compara lo que dice CFE vs lo que realmente consumiste. Identifica cobros indebidos y haz reclamos respaldados por datos.',
+        image: '/images/solutions/facturacion.png',
+      },
+      {
+        title: 'Generación Propia',
+        description: 'Monitorea en tiempo real la energía que producen tus paneles solares o cogeneración, el ahorro generado y beneficios ambientales.',
+        image: '/images/solutions/generacion.png',
+      },
+      {
+        title: 'Alertas y Proyecciones',
+        description: 'Configura alertas automáticas para exceso de consumo, picos de demanda y desperdicio nocturno. Obtén proyecciones de gasto antes de que llegue la factura.',
         image: '/images/solutions/alertas.png',
-      },
-      {
-        title: 'Generacion en Sitio',
-        description: 'Si tienes paneles o cogeneracion: comparativo de consumo vs generacion, ahorro monetario, beneficios ambientales y estatus de inversores.',
-        image: '/images/solutions/reportes.png',
       },
     ],
   },

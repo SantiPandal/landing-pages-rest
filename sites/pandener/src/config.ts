@@ -9,18 +9,18 @@ export const config: SiteConfig = {
     accentColor: '#00AFD7',
     fontFamily: 'Montserrat',
     ctaUrl: 'https://cotizador.pandener.com.mx',
-    ctaLabel: 'Solicita tu evaluacion energetica',
+    ctaLabel: 'Diagnóstico Gratis',
   },
 
   hero: {
-    headline: 'Tu propia planta de energia. Sin cortes. Sin sorpresas.',
-    subheadline: 'Genera electricidad dentro de tu planta, mas barata que CFE y sin depender de la red. Nosotros instalamos, operamos y mantenemos todo.',
+    headline: 'Tu propia planta de energía.',
+    subheadline: 'Genera electricidad dentro de tu planta, más barata que CFE y sin depender de la red. Nosotros instalamos, operamos y mantenemos todo.',
     backgroundImage: '/images/hero-bg.jpg',
-    ctaLabel: 'Solicita tu evaluacion energetica',
+    ctaLabel: 'Diagnóstico Gratis',
   },
 
   socialProof: {
-    title: 'Presencia en 25 estados de la republica y 9 paises de Latinoamerica.',
+    title: 'Presencia en 25 estados de la república y 9 países de Latinoamérica.',
     logos: [
       { src: '/images/clients/mabe.png', alt: 'Mabe' },
       { src: '/images/clients/celestica.png', alt: 'Celestica' },
@@ -33,86 +33,86 @@ export const config: SiteConfig = {
 
   aggregateMetrics: {
     items: [
-      { value: '24+', label: 'anos de experiencia' },
-      { value: '85 MW', label: 'instalados en Mexico' },
+      { value: '24+', label: 'años de experiencia' },
+      { value: '85 MW', label: 'instalados en México' },
       { value: '44', label: 'proyectos completados' },
-      { value: '9', label: 'paises con operaciones' },
+      { value: '9', label: 'países con operaciones' },
     ],
   },
 
   howItWorks: {
-    title: 'Tu problema',
-    subtitle: 'Cada corte electrico cuesta millones. Las tarifas suben sin aviso. Tu operacion depende de una red que no controlas.',
+    title: '¿Qué tengo que hacer?',
+    subtitle: 'Sigue los pasos para que nosotros te ayudemos a generar tu propia energía.',
     steps: [
       {
         number: 1,
-        title: 'Evaluacion',
-        description: 'Analizamos tu consumo electrico y termico para disenar la solucion optima de generacion in-situ.',
+        title: 'Evaluación',
+        description: 'Analizamos tu consumo eléctrico y térmico para diseñar la solución óptima de generación en sitio.',
       },
       {
         number: 2,
-        title: 'Instalacion Llave en Mano',
-        description: 'Instalamos y operamos la planta dentro de tu sitio. Tu produces tu propia electricidad con gas natural o biogas.',
+        title: 'Te damos una propuesta',
+        description: 'Te presentamos una propuesta de inversión y ahorro energético.',
       },
       {
         number: 3,
-        title: 'Energia Garantizada',
-        description: 'Eficiencia superior a la red y costos predecibles a largo plazo. Monitoreo en tiempo real y personal certificado por el fabricante.',
+        title: 'Instalamos y operamos tu planta',
+        description: 'Instalamos y operamos tu planta de generación en sitio. Tú produces tu propia electricidad con gas natural o biogás.',
       },
     ],
   },
 
   solutions: {
-    headline: 'Nuestra solucion',
-    subtitle: 'Tres servicios integrados para que nunca mas dependas de la red.',
+    headline: 'Nuestra solución',
+    subtitle: 'Todo para que generes tu propia energía.',
     items: [
       {
         title: 'Llave en mano',
-        description: 'De la evaluacion a la operacion. No necesitas un equipo de ingenieria propio. Partner exclusivo de GUASCOR Energy en Mexico.',
+        description: 'Instalamos y operamos todo. No necesitas equipo de ingeniería.',
         image: '/images/solutions/cogeneration.png',
         stats: [
-          { value: '46%', label: 'eficiencia (vs 33% de la red)' },
+          { value: '46%', label: 'eficiencia' },
           { value: '95%', label: 'disponibilidad' },
         ],
       },
       {
-        title: 'O&M integrado 24/7',
-        description: 'Si algo falla, lo detectamos antes que tu. Partes de reemplazo en 72 horas, sin que tu operacion se detenga.',
+        title: 'Mantenimiento 24/7',
+        description: 'Cuidamos tu equipo y resolvemos fallas rápido.',
         image: '/images/solutions/isla-energetica.png',
         stats: [
           { value: '99.5%', label: 'confiabilidad' },
         ],
       },
       {
-        title: 'Sin inversion inicial',
-        description: 'No necesitas invertir. Nosotros ponemos el capital y operamos la planta. Tu solo pagas por la energia que consumes.',
+        title: 'Sin inversión inicial',
+        description: 'Tú no pagas la instalación. Solo pagas la energía que usas.',
         image: '/images/solutions/vapor.png',
       },
     ],
   },
 
   midCta: {
-    headline: '¿Tu planta sufre cortes electricos o costos impredecibles?',
-    subheadline: 'En 48 horas te entregamos un analisis de viabilidad para generacion in-situ. Sin costo.',
+    headline: '¿Tu planta sufre cortes eléctricos o costos impredecibles?',
+    subheadline: 'En 48 horas te entregamos un análisis de viabilidad para generación en sitio. Sin costo.',
   },
 
   caseStudy: {
-    headline: 'Casos de Exito',
+    headline: 'Casos de Éxito',
     items: [
       {
         company: 'MABE',
         logo: '/images/clients/mabe.png',
-        industry: 'Electrodomesticos',
-        challenge: 'Planta en Saltillo, Coahuila con alta demanda electrica y de climatizacion. Costos energeticos elevados y dependencia total de la red electrica para operaciones criticas de manufactura.',
-        solution: 'Proyecto PPA de cogeneracion con motor Guascor Energy G-48SL a gas natural. Capacidad de 1,400 kW electricos y 300 ton/h de potencia termica para agua helada. Pandener instala, opera y mantiene el sistema.',
+        industry: 'Electrodomésticos',
+        challenge: 'Planta en Saltillo, Coahuila con alta demanda eléctrica y de climatización. Costos energéticos elevados y dependencia total de la red eléctrica para operaciones críticas de manufactura.',
+        solution: 'Proyecto PPA de cogeneración con motor Guascor Energy G-48SL a gas natural. Capacidad de 1,400 kW eléctricos y 300 ton/h de potencia térmica para agua helada. Pandener instala, opera y mantiene el sistema.',
         results: [
-          { value: '1,400 kW', label: 'capacidad electrica instalada' },
-          { value: '100%', label: 'agua helada suministrada por cogeneracion' },
-          { value: '0', label: 'inversion inicial del cliente (modelo PPA)' },
+          { value: '1,400 kW', label: 'capacidad eléctrica instalada' },
+          { value: '100%', label: 'agua helada suministrada por cogeneración' },
+          { value: '0', label: 'inversión inicial del cliente (modelo PPA)' },
         ],
-        quote: 'La cogeneracion suministra energia electrica y el 100% de las necesidades de agua helada, brindando confiabilidad en las operaciones y amplios beneficios economicos por la reduccion en costos energeticos.',
+        quote: 'La cogeneración suministra energía eléctrica y el 100% de las necesidades de agua helada, brindando confiabilidad en las operaciones y amplios beneficios económicos por la reducción en costos energéticos.',
         quoteAuthor: 'MABE',
-        quoteRole: 'Saltillo, Coahuila — En operacion desde 2019',
+        quoteRole: 'Saltillo, Coahuila — En operación desde 2019',
       },
     ],
   },
@@ -121,14 +121,14 @@ export const config: SiteConfig = {
     headline: 'Lo que dicen nuestros clientes',
     items: [
       {
-        quote: 'Antes teniamos 3 o 4 cortes al mes. Desde que generamos nuestra propia energia, cero paros en 2 anos.',
-        author: 'Ing. Laura Dominguez',
+        quote: 'Antes teníamos 3 o 4 cortes al mes. Desde que generamos nuestra propia energía, cero paros en 2 años.',
+        author: 'Ing. Laura Domínguez',
         role: 'Gerente de Planta',
-        company: 'Quimica Industrial del Norte',
-        metric: { value: '0', label: 'paros en 2 anos' },
+        company: 'Química Industrial del Norte',
+        metric: { value: '0', label: 'paros en 2 años' },
       },
       {
-        quote: 'El modelo sin inversion fue clave para nosotros. No desembolsamos un peso en la instalacion y desde el primer mes pagamos menos que con CFE.',
+        quote: 'El modelo sin inversión fue clave para nosotros. No desembolsamos un peso en la instalación y desde el primer mes pagamos menos que con CFE.',
         author: 'Lic. Mariana Torres',
         role: 'Directora de Finanzas',
         company: 'Procesadora de Alimentos del Norte',
@@ -139,25 +139,25 @@ export const config: SiteConfig = {
 
   team: {
     headline: 'Respaldo de Clase Mundial',
-    subtitle: 'Mas de dos decadas disenando, instalando y operando plantas de generacion en Mexico.',
+    subtitle: 'Más de dos décadas diseñando, instalando y operando plantas de generación en México.',
     members: [
       {
         name: 'Director General',
         role: 'CEO',
         image: '/images/team/placeholder-1.jpg',
-        bio: '+22 anos en generacion de energia. Ingeniero mecanico con MBA.',
+        bio: '+22 años en generación de energía. Ingeniero mecánico con MBA.',
       },
       {
-        name: 'Director de Ingenieria',
-        role: 'Ingenieria',
+        name: 'Director de Ingeniería',
+        role: 'Ingeniería',
         image: '/images/team/placeholder-2.jpg',
-        bio: 'Especialista en motores de generacion y sistemas de energia para plantas industriales.',
+        bio: 'Especialista en motores de generación y sistemas de energía para plantas industriales.',
       },
       {
         name: 'Director de O&M',
         role: 'Operaciones',
         image: '/images/team/placeholder-3.jpg',
-        bio: 'Certificado por el fabricante. Supervisa la operacion de todas las plantas activas.',
+        bio: 'Certificado por el fabricante. Supervisa la operación de todas las plantas activas.',
       },
     ],
   },
@@ -168,22 +168,22 @@ export const config: SiteConfig = {
       {
         image: '/images/trust/logo-guascor-energy.webp',
         label: 'GUASCOR Energy',
-        description: 'Partner exclusivo en Mexico',
+        description: 'Partner exclusivo en México',
       },
       {
         image: '/images/trust/logo-cre.png',
         label: 'CRE',
-        description: 'Permiso de generacion vigente',
+        description: 'Permiso de generación vigente',
       },
       {
         image: '/images/trust/badge-iso-9001.png',
         label: 'ISO 9001',
-        description: 'Sistema de gestion de calidad',
+        description: 'Sistema de gestión de calidad',
       },
       {
         image: '/images/trust/badge-iso-14001.png',
         label: 'ISO 14001',
-        description: 'Gestion ambiental',
+        description: 'Gestión ambiental',
       },
     ],
   },
@@ -192,57 +192,57 @@ export const config: SiteConfig = {
     headline: 'Preguntas Frecuentes',
     items: [
       {
-        question: '¿Que es un motogenerador?',
-        answer: 'Es un motor de gas natural que genera electricidad directamente en tu planta. Funciona igual que la energia de la red, pero la produces tu. Es como tener tu propia planta de luz, operando con gas natural.',
+        question: '¿Qué es un motogenerador?',
+        answer: 'Es un motor de gas natural que genera electricidad directamente en tu planta. Funciona igual que la energía de la red, pero la produces tú. Es como tener tu propia planta de luz, operando con gas natural.',
       },
       {
-        question: '¿Puedo usar los motores junto con la energia de CFE?',
-        answer: 'Si. Los motores pueden operar como respaldo cuando la red falla, o como tu fuente principal de energia. Se adapta a lo que necesites.',
+        question: '¿Puedo usar los motores junto con la energía de CFE?',
+        answer: 'Sí. Los motores pueden operar como respaldo cuando la red falla, o como tu fuente principal de energía. Se adapta a lo que necesites.',
       },
       {
-        question: '¿Que pasa si mi demanda de energia crece?',
-        answer: 'Se pueden agregar mas motores. El sistema es modular y crece con tu operacion.',
+        question: '¿Qué pasa si mi demanda de energía crece?',
+        answer: 'Se pueden agregar más motores. El sistema es modular y crece con tu operación.',
       },
       {
-        question: '¿Que tipo de combustible usan los motores?',
-        answer: 'Gas natural. Es mas economico y mas limpio que el diesel. Se conecta directamente a la red de gas de tu planta.',
+        question: '¿Qué tipo de combustible usan los motores?',
+        answer: 'Gas natural. Es más económico y más limpio que el diésel. Se conecta directamente a la red de gas de tu planta.',
       },
       {
-        question: '¿Cuanto espacio se necesita?',
-        answer: 'Depende del tamano del equipo. Despues del diagnostico te decimos exactamente cuanto espacio necesitas y donde se puede instalar.',
+        question: '¿Cuánto espacio se necesita?',
+        answer: 'Depende del tamaño del equipo. Después del diagnóstico te decimos exactamente cuánto espacio necesitas y dónde se puede instalar.',
       },
       {
-        question: '¿Quien se encarga del mantenimiento?',
-        answer: 'Nosotros. Operamos y mantenemos el equipo para que tu solo te preocupes por tu operacion.',
+        question: '¿Quién se encarga del mantenimiento?',
+        answer: 'Nosotros. Operamos y mantenemos el equipo para que tú solo te preocupes por tu operación.',
       },
     ],
   },
 
   inlineForm: {
-    headline: 'Solicita tu evaluacion energetica',
+    headline: 'Diagnóstico Gratis',
     subtitle: 'Analizamos tu planta y te presentamos un estudio de viabilidad en 48 horas. Sin compromiso.',
     fields: [
       { name: 'nombre', label: 'Nombre completo', type: 'text', placeholder: 'Tu nombre', required: true },
       { name: 'empresa', label: 'Empresa', type: 'text', placeholder: 'Nombre de tu empresa', required: true },
-      { name: 'email', label: 'Correo electronico', type: 'email', placeholder: 'tu@empresa.com', required: true },
-      { name: 'telefono', label: 'Telefono', type: 'tel', placeholder: '+52 (55) 1234 5678' },
-      { name: 'demanda', label: 'Demanda electrica aproximada', type: 'select', required: true, options: ['1 - 3 MW', '3 - 5 MW', '5 - 10 MW', 'Mas de 10 MW'] },
+      { name: 'email', label: 'Correo electrónico', type: 'email', placeholder: 'tu@empresa.com', required: true },
+      { name: 'telefono', label: 'Teléfono', type: 'tel', placeholder: '+52 (55) 1234 5678' },
+      { name: 'demanda', label: 'Demanda eléctrica aproximada', type: 'select', required: true, options: ['1 - 3 MW', '3 - 5 MW', '5 - 10 MW', 'Más de 10 MW'] },
     ],
-    submitLabel: 'Solicitar evaluacion gratuita',
+    submitLabel: 'Solicitar evaluación gratuita',
     disclaimer: 'Al enviar este formulario aceptas nuestro Aviso de Privacidad. Te contactamos en menos de 48 horas.',
   },
 
   finalCta: {
-    headline: '¿Cuanto te cuesta depender de la red?',
-    subheadline: 'En 48 horas te entregamos un analisis de viabilidad energetica para tu planta. Sin costo, sin compromiso.',
-    ctaLabel: 'Agenda tu evaluacion gratuita',
+    headline: '¿Cuánto te cuesta depender de la red?',
+    subheadline: 'En 48 horas te entregamos un análisis de viabilidad energética para tu planta. Sin costo, sin compromiso.',
+    ctaLabel: 'Agenda tu evaluación gratuita',
   },
 
   navbar: {
     links: [
       { label: 'Soluciones', href: '#soluciones' },
-      { label: 'Como Funciona', href: '#como-funciona' },
-      { label: 'Casos de Exito', href: '#casos' },
+      { label: 'Cómo Funciona', href: '#como-funciona' },
+      { label: 'Casos de Éxito', href: '#casos' },
       { label: 'FAQ', href: '#faq' },
     ],
   },
@@ -253,7 +253,7 @@ export const config: SiteConfig = {
     email: 'contacto@pandener.com.mx',
     links: [
       { label: 'Aviso de Privacidad', href: '/privacidad' },
-      { label: 'Terminos y Condiciones', href: '/terminos' },
+      { label: 'Términos y Condiciones', href: '/terminos' },
     ],
   },
 }
