@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     secondaryColor: '#58AC25',
     accentColor: '#58AC25',
     fontFamily: 'Montserrat',
-    ctaUrl: 'https://calculadora.viveenergiasolar.com',
+    ctaUrl: 'https://viveenergia.vercel.app/',
     ctaLabel: 'Cotiza tu proyecto solar',
   },
 

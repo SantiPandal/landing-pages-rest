@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     secondaryColor: '#00205B',
     accentColor: '#FFA400',
     fontFamily: 'Quicksand',
-    ctaUrl: 'https://cotizador.eleiaenergia.mx',
+    ctaUrl: 'https://viveenergia.vercel.app/',
     ctaLabel: 'Calcula tu ahorro',
   },
 

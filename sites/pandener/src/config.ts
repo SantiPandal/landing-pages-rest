@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     secondaryColor: '#3C3F42',
     accentColor: '#00AFD7',
     fontFamily: 'Montserrat',
-    ctaUrl: 'https://cotizador.pandener.com.mx',
+    ctaUrl: 'https://viveenergia.vercel.app/',
     ctaLabel: 'Diagnóstico Gratis',
   },
 
