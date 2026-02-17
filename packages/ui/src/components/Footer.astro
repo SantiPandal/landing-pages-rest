@@ -1,0 +1,76 @@
+---
+interface Props {
+  brandName: string
+  logo: string
+  address?: string
+  phone?: string
+  email?: string
+  links?: Array<{ label: string; href: string }>
+  socialLinks?: Array<{ platform: string; url: string }>
+}
+
+const { brandName, logo, address, phone, email, links, socialLinks } = Astro.props
+---
+
+<footer class="bg-gray-900 text-gray-400 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <img src={logo} alt={brandName} class="h-8 w-auto brightness-0 invert mb-4" />
+        {address && (
+          <p class="text-sm leading-relaxed max-w-xs">{address}</p>
+        )}
+      </div>
+
+      <!-- Contact -->
+      {(phone || email) && (
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contacto</h4>
+          <div class="space-y-2 text-sm">
+            {phone && (
+              <a href={`tel:${phone}`} class="block hover:text-white transition-colors">{phone}</a>
+            )}
+            {email && (
+              <a href={`mailto:${email}`} class="block hover:text-white transition-colors">{email}</a>
+            )}
+          </div>
+        </div>
+      )}
+
+      <!-- Links -->
+      {links && links.length > 0 && (
+        <div>
+          <h4 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Enlaces</h4>
+          <div class="space-y-2 text-sm">
+            {links.map((link) => (
+              <a href={link.href} class="block hover:text-white transition-colors">{link.label}</a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm">
+        &copy; {new Date().getFullYear()} {brandName}. Todos los derechos reservados.
+      </p>
+      {socialLinks && socialLinks.length > 0 && (
+        <div class="flex gap-4">
+          {socialLinks.map((social) => (
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              aria-label={social.platform}
+            >
+              {social.platform}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</footer>

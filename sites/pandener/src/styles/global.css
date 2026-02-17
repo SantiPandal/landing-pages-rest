@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@source "../../../../packages/ui/src/**/*.astro";
+
+:root {
+  --color-primary: #0F4C81;
+  --color-secondary: #3C3F42;
+  --color-accent: #00AFD7;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family), system-ui, sans-serif;
+}

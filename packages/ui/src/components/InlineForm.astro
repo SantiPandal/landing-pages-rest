@@ -1,0 +1,80 @@
+---
+interface Props {
+  headline?: string
+  subtitle?: string
+  fields: Array<{
+    name: string
+    label: string
+    type: 'text' | 'email' | 'tel' | 'select'
+    placeholder?: string
+    required?: boolean
+    options?: string[]
+  }>
+  submitLabel: string
+  disclaimer?: string
+  ctaUrl?: string
+}
+
+const { headline = 'Contactanos', subtitle, fields, submitLabel, disclaimer, ctaUrl } = Astro.props
+---
+
+<section class="py-20 lg:py-28 bg-gray-50" id="contacto-form">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 lg:p-10">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-primary)] tracking-tight">
+          {headline}
+        </h2>
+        {subtitle && (
+          <p class="mt-3 text-gray-600">{subtitle}</p>
+        )}
+      </div>
+
+      <form class="space-y-5" action={ctaUrl || '#'} method="POST">
+        {fields.map((field) => (
+          <div>
+            <label for={field.name} class="block text-sm font-medium text-gray-700 mb-1.5">
+              {field.label} {field.required && <span class="text-red-400">*</span>}
+            </label>
+            {field.type === 'select' ? (
+              <select
+                id={field.name}
+                name={field.name}
+                required={field.required}
+                class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30 focus:border-[var(--color-accent)] transition-colors"
+              >
+                <option value="">{field.placeholder || 'Selecciona...'}</option>
+                {field.options?.map((opt) => (
+                  <option value={opt}>{opt}</option>
+                ))}
+              </select>
+            ) : (
+              <input
+                type={field.type}
+                id={field.name}
+                name={field.name}
+                placeholder={field.placeholder}
+                required={field.required}
+                class="w-full px-4 py-3 border border-gray-200 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)]/30 focus:border-[var(--color-accent)] transition-colors"
+              />
+            )}
+          </div>
+        ))}
+
+        <button
+          type="submit"
+          class="w-full inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-[var(--color-accent)] hover:brightness-110 rounded-lg transition-all shadow-lg shadow-[var(--color-accent)]/25 hover:shadow-xl hover:-translate-y-0.5"
+        >
+          {submitLabel}
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+
+        {disclaimer && (
+          <p class="text-xs text-gray-400 text-center mt-4">{disclaimer}</p>
+        )}
+      </form>
+    </div>
+  </div>
+</section>

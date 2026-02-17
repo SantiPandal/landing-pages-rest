@@ -1,0 +1,48 @@
+---
+interface Props {
+  ctaUrl: string
+  ctaLabel: string
+}
+
+const { ctaUrl, ctaLabel } = Astro.props
+---
+
+<!-- Sticky bottom CTA for mobile only -->
+<div
+  id="sticky-cta"
+  class="fixed bottom-0 left-0 right-0 z-40 lg:hidden translate-y-full transition-transform duration-300 bg-white border-t border-gray-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"
+>
+  <div class="px-4 py-3">
+    <a
+      href={ctaUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center justify-center w-full px-6 py-3.5 text-sm font-semibold text-white bg-[var(--color-accent)] hover:brightness-110 rounded-lg transition-all"
+    >
+      {ctaLabel}
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</div>
+
+<script>
+  const stickyCta = document.getElementById('sticky-cta')
+  if (stickyCta) {
+    let lastScroll = 0
+    const handleScroll = () => {
+      const scrollY = window.scrollY
+      const show = scrollY > 600
+      if (show) {
+        stickyCta.classList.remove('translate-y-full')
+        stickyCta.classList.add('translate-y-0')
+      } else {
+        stickyCta.classList.add('translate-y-full')
+        stickyCta.classList.remove('translate-y-0')
+      }
+      lastScroll = scrollY
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+  }
+</script>

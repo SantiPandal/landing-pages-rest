@@ -1,0 +1,36 @@
+---
+interface Props {
+  headline: string
+  subheadline?: string
+  ctaUrl: string
+  ctaLabel: string
+}
+
+const { headline, subheadline, ctaUrl, ctaLabel } = Astro.props
+---
+
+<section class="py-16 lg:py-20 bg-[var(--color-primary)]/5">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-[var(--color-primary)] tracking-tight">
+      {headline}
+    </h2>
+    {subheadline && (
+      <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">
+        {subheadline}
+      </p>
+    )}
+    <div class="mt-8">
+      <a
+        href={ctaUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center px-8 py-4 text-base font-semibold text-white bg-[var(--color-accent)] hover:brightness-110 rounded-lg transition-all shadow-lg shadow-[var(--color-accent)]/25 hover:shadow-xl hover:-translate-y-0.5"
+      >
+        {ctaLabel}
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

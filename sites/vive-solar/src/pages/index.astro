@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '@landing/ui/components/Navbar.astro'
+import Hero from '@landing/ui/components/Hero.astro'
+import SocialProof from '@landing/ui/components/SocialProof.astro'
+import AggregateMetrics from '@landing/ui/components/AggregateMetrics.astro'
+import HowItWorks from '@landing/ui/components/HowItWorks.astro'
+import Solutions from '@landing/ui/components/Solutions.astro'
+import MidCTA from '@landing/ui/components/MidCTA.astro'
+import CaseStudy from '@landing/ui/components/CaseStudy.astro'
+import Testimonials from '@landing/ui/components/Testimonials.astro'
+import TeamSection from '@landing/ui/components/TeamSection.astro'
+import TrustBadges from '@landing/ui/components/TrustBadges.astro'
+import FAQ from '@landing/ui/components/FAQ.astro'
+import InlineForm from '@landing/ui/components/InlineForm.astro'
+import FinalCTA from '@landing/ui/components/FinalCTA.astro'
+import Footer from '@landing/ui/components/Footer.astro'
+import StickyMobileCTA from '@landing/ui/components/StickyMobileCTA.astro'
+import { config } from '../config'
+import '../styles/global.css'
+---
+
+<Layout title={`${config.brand.name} | Energía Solar Comercial e Industrial`}>
+  <Navbar
+    brandName={config.brand.name}
+    logo={config.brand.logo}
+    links={config.navbar.links}
+    ctaUrl={config.brand.ctaUrl}
+    ctaLabel={config.brand.ctaLabel}
+    transparent
+  />
+  <Hero
+    headline={config.hero.headline}
+    subheadline={config.hero.subheadline}
+    backgroundImage={config.hero.backgroundImage}
+    ctaUrl={config.brand.ctaUrl}
+    ctaLabel={config.hero.ctaLabel ?? config.brand.ctaLabel}
+  />
+  <SocialProof
+    title={config.socialProof.title}
+    logos={config.socialProof.logos}
+  />
+  <HowItWorks
+    title={config.howItWorks.title}
+    subtitle={config.howItWorks.subtitle}
+    steps={config.howItWorks.steps}
+  />
+  {config.aggregateMetrics && (
+    <AggregateMetrics items={config.aggregateMetrics.items} />
+  )}
+  <Solutions
+    headline={config.solutions.headline}
+    subtitle={config.solutions.subtitle}
+    items={config.solutions.items}
+  />
+  {config.midCta && (
+    <MidCTA
+      headline={config.midCta.headline}
+      subheadline={config.midCta.subheadline}
+      ctaUrl={config.brand.ctaUrl}
+      ctaLabel={config.midCta.ctaLabel ?? config.brand.ctaLabel}
+    />
+  )}
+  {config.caseStudy && (
+    <CaseStudy
+      headline={config.caseStudy.headline}
+      items={config.caseStudy.items}
+    />
+  )}
+  <Testimonials
+    headline={config.testimonials.headline}
+    items={config.testimonials.items}
+  />
+  {config.team && (
+    <TeamSection
+      headline={config.team.headline}
+      subtitle={config.team.subtitle}
+      members={config.team.members}
+    />
+  )}
+  {config.trustBadges && (
+    <TrustBadges
+      headline={config.trustBadges.headline}
+      items={config.trustBadges.items}
+    />
+  )}
+  {config.faq && (
+    <FAQ
+      headline={config.faq.headline}
+      subtitle={config.faq.subtitle}
+      items={config.faq.items}
+    />
+  )}
+  {config.inlineForm && (
+    <InlineForm
+      headline={config.inlineForm.headline}
+      subtitle={config.inlineForm.subtitle}
+      fields={config.inlineForm.fields}
+      submitLabel={config.inlineForm.submitLabel}
+      disclaimer={config.inlineForm.disclaimer}
+    />
+  )}
+  <FinalCTA
+    headline={config.finalCta.headline}
+    subheadline={config.finalCta.subheadline}
+    ctaUrl={config.brand.ctaUrl}
+    ctaLabel={config.finalCta.ctaLabel ?? config.brand.ctaLabel}
+  />
+  <Footer
+    brandName={config.brand.name}
+    logo={config.brand.logo}
+    address={config.footer.address}
+    phone={config.footer.phone}
+    email={config.footer.email}
+    links={config.footer.links}
+  />
+  <StickyMobileCTA
+    ctaUrl={config.brand.ctaUrl}
+    ctaLabel={config.brand.ctaLabel}
+  />
+</Layout>

@@ -1,0 +1,65 @@
+---
+interface Props {
+  headline?: string
+  subtitle?: string
+  items: Array<{
+    title: string
+    description: string
+    image?: string
+    icon?: string
+    stats?: Array<{ value: string; label: string }>
+  }>
+}
+
+const { headline = 'Nuestras Soluciones', subtitle, items } = Astro.props
+---
+
+<section class="py-20 lg:py-28 bg-gray-50" id="soluciones">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[var(--color-primary)] tracking-tight">
+        {headline}
+      </h2>
+      {subtitle && (
+        <p class="mt-4 text-lg text-gray-600">{subtitle}</p>
+      )}
+    </div>
+
+    <!-- Cards -->
+    <div class={`grid grid-cols-1 gap-8 ${items.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : items.length >= 3 ? 'md:grid-cols-2 lg:grid-cols-3' : 'max-w-lg mx-auto'}`}>
+      {items.map((item) => (
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+          {item.image && (
+            <div class="aspect-video overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
+          <div class="p-6 lg:p-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              {item.title}
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              {item.description}
+            </p>
+            {item.stats && item.stats.length > 0 && (
+              <div class="mt-6 flex gap-6 pt-6 border-t border-gray-100">
+                {item.stats.map((stat) => (
+                  <div>
+                    <p class="text-2xl font-bold text-[var(--color-accent)]">{stat.value}</p>
+                    <p class="text-sm text-gray-500">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

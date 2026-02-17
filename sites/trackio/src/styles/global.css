@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@source "../../../../packages/ui/src/**/*.astro";
+
+:root {
+  --color-primary: #1E6DA1;
+  --color-secondary: #58AC25;
+  --color-accent: #58AC25;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family), system-ui, sans-serif;
+}
+
+/* Sharp corners — no rounded buttons/cards */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}

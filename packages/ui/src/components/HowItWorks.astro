@@ -1,0 +1,52 @@
+---
+interface Props {
+  title?: string
+  subtitle?: string
+  steps: Array<{
+    number: number
+    title: string
+    description: string
+    icon?: string
+  }>
+}
+
+const { title = 'Cómo Funciona', subtitle, steps } = Astro.props
+---
+
+<section class="py-20 lg:py-28 bg-white" id="como-funciona">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-[var(--color-primary)] tracking-tight">
+        {title}
+      </h2>
+      {subtitle && (
+        <p class="mt-4 text-lg text-gray-600">{subtitle}</p>
+      )}
+    </div>
+
+    <!-- Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      {steps.map((step, i) => (
+        <div class="relative text-center group">
+          {/* Connector line (desktop only) */}
+          {i < steps.length - 1 && (
+            <div class="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gray-200"></div>
+          )}
+
+          {/* Step number */}
+          <div class="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-[var(--color-primary)]/5 text-[var(--color-primary)] mb-6 group-hover:bg-[var(--color-primary)]/10 transition-colors">
+            <span class="text-2xl font-bold">{step.number}</span>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            {step.title}
+          </h3>
+          <p class="text-gray-600 leading-relaxed max-w-xs mx-auto">
+            {step.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

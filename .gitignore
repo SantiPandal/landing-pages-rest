@@ -1,0 +1,11 @@
+node_modules
+dist
+.turbo
+.astro
+.vercel
+.env
+.env.*
+!.env.example
+*.log
+pnpm-lock.yaml
+vive-website-images-data/

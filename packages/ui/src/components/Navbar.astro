@@ -1,0 +1,139 @@
+---
+interface Props {
+  brandName: string
+  logo: string
+  links: Array<{ label: string; href: string }>
+  ctaUrl: string
+  ctaLabel: string
+  transparent?: boolean
+}
+
+const { brandName, logo, links, ctaUrl, ctaLabel, transparent = false } = Astro.props
+---
+
+<nav
+  id="main-nav"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b"
+  style={transparent ? 'background:transparent;border-color:transparent;' : 'background:rgba(255,255,255,0.95);backdrop-filter:blur(4px);border-color:rgb(243,244,246);'}
+  data-transparent={transparent ? 'true' : 'false'}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-2 shrink-0">
+        <img src={logo} alt={brandName} class="h-8 lg:h-10 w-auto" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center gap-8">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class:list={[
+              'nav-link text-sm font-medium transition-colors',
+              transparent ? 'text-white/90 hover:text-white' : 'text-gray-600 hover:text-[var(--color-primary)]',
+            ]}
+          >
+            {link.label}
+          </a>
+        ))}
+        <a
+          href={ctaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-[var(--color-accent)] hover:brightness-110 rounded-lg transition-all"
+        >
+          {ctaLabel}
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-btn"
+        class:list={[
+          'lg:hidden p-2',
+          transparent ? 'text-white hover:text-white/80' : 'text-gray-600 hover:text-gray-900',
+        ]}
+        aria-label="Toggle menu"
+      >
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-100 bg-white">
+    <div class="px-4 py-4 space-y-3">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class="block text-base font-medium text-gray-600 hover:text-[var(--color-primary)] transition-colors"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href={ctaUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block w-full text-center px-5 py-3 text-sm font-semibold text-white bg-[var(--color-accent)] hover:brightness-110 rounded-lg transition-all"
+      >
+        {ctaLabel}
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Spacer for fixed nav (skip when transparent, navbar overlaps hero) -->
+{!transparent && <div class="h-16 lg:h-20"></div>}
+
+<script>
+  const nav = document.getElementById('main-nav')
+  const btn = document.getElementById('mobile-menu-btn')
+  const menu = document.getElementById('mobile-menu')
+  const iconOpen = document.getElementById('menu-icon-open')
+  const iconClose = document.getElementById('menu-icon-close')
+  const isTransparent = nav?.dataset.transparent === 'true'
+
+  if (isTransparent && nav) {
+    const navLinks = nav.querySelectorAll<HTMLElement>('.nav-link')
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 50
+      if (scrolled) {
+        nav.style.background = 'rgba(255,255,255,0.95)'
+        nav.style.backdropFilter = 'blur(4px)'
+        nav.style.borderColor = 'rgb(243,244,246)'
+        navLinks.forEach((l) => { l.style.color = 'rgb(75,85,99)' })
+        if (btn) btn.style.color = 'rgb(75,85,99)'
+      } else {
+        nav.style.background = 'transparent'
+        nav.style.backdropFilter = 'none'
+        nav.style.borderColor = 'transparent'
+        navLinks.forEach((l) => { l.style.color = 'rgba(255,255,255,0.9)' })
+        if (btn) btn.style.color = 'white'
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+  }
+
+  btn?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden')
+    menu?.classList.toggle('hidden')
+    iconOpen?.classList.toggle('hidden')
+    iconClose?.classList.toggle('hidden')
+  })
+
+  // Close menu on link click
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden')
+      iconOpen?.classList.remove('hidden')
+      iconClose?.classList.add('hidden')
+    })
+  })
+</script>
