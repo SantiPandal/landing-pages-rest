@@ -9,7 +9,7 @@ export const config: SiteConfig = {
     accentColor: '#58AC25',
     fontFamily: 'Montserrat',
     ctaUrl: 'https://viveenergia.vercel.app/',
-    ctaLabel: 'Solicita tu Demo',
+    ctaLabel: 'Descubre cuánto puedes ahorrar',
   },
 
   hero: {

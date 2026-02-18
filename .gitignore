@@ -8,3 +8,4 @@ dist
 !.env.example
 *.log
 vive-website-images-data/
+generate-images.py
