@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     secondaryColor: '#3C3F42',
     accentColor: '#00AFD7',
     fontFamily: 'Montserrat',
-    ctaUrl: 'https://viveenergia.vercel.app/',
+    ctaUrl: 'https://landing-page-savings-calc.vercel.app?product=generacion',
     ctaLabel: 'Diagnóstico Gratis',
   },
 

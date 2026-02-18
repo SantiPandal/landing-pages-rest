@@ -8,7 +8,7 @@ export const config: SiteConfig = {
     secondaryColor: '#58AC25',
     accentColor: '#58AC25',
     fontFamily: 'Montserrat',
-    ctaUrl: 'https://viveenergia.vercel.app/',
+    ctaUrl: 'https://landing-page-savings-calc.vercel.app?product=monitoreo',
     ctaLabel: 'Descubre cuánto puedes ahorrar',
   },
 
